@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-
+console.log("probando rama develop");
 
 admin.initializeApp();
 admin.firestore().settings({ timestampsInSnapshots: true });
