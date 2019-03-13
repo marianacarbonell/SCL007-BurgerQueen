@@ -19,10 +19,10 @@ class buscador extends Component {
                         <input type="submit" className="btn btn-lg btn-danger btn-block" value="Enviar" />
                     </div>
                     <div className="form-group col-md-4">
-                        <input type="submit" className="btn btn-lg btn-danger btn-block" value="Desayuno" />
+                        <input type="submit" className="btn btn-light btn-block" value="Desayuno" />
                     </div>
                     <div className="form-group col-md-4">
-                        <input type="submit" className="btn btn-lg btn-danger btn-block" value="Almuerzo / Cena" />
+                        <input type="submit" className="btn btn-light btn-block" value="Almuerzo / Cena" />
                     </div>
                 </div>
             </form>
