@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import buscador from './Components/Buscador';
+import NameForm from './Components/NameForm';
 
 import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
@@ -15,7 +15,7 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe('debería encontrar el componente Buscador en App',()=>{
+describe('debería encontrar el componente NameForm en App',()=>{
   const search = shallow(<App />);
-  expect(search.find(buscador).length).toBe(1);
+  expect(search.find(NameForm).length).toBe(1);
 });
