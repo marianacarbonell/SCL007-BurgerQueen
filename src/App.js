@@ -10,14 +10,11 @@ class App extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div class="app">
       <div class="panel-heading">
       <NavbarPag/>
       </div>
-      <div class="panel-body">
       <NameForm />
-      <Button variant="info">Info</Button>
-      </div>
       </div>
     );
   }
