@@ -30,9 +30,7 @@ class NameForm extends Component {
         db.collection('Pedidos').add({
             Cliente: this.state.name
         }).then(() => {
-            console.log('enviado')
         }).catch(() => {
-            console.log('error');
         })
     }
     render() {

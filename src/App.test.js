@@ -17,5 +17,5 @@ it('renders without crashing', () => {
 
 describe('debería encontrar el componente NameForm en App',()=>{
   const search = shallow(<App />);
-  expect(search.find(NameForm).length).toBe(1);
+  expect(search.find(NameFormn).length).toBe(1);
 });
