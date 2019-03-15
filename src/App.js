@@ -2,31 +2,22 @@ import React, { Component } from 'react';
 import NameForm from './Components/NameForm'; 
 import { Link } from 'react-router-dom';
 import firebase from './firebase';
+import { Button } from 'react-bootstrap';
+import NavbarPag from'./Components/Navbar'; 
+
 
 class App extends Component {
 
-state = {
-  termino : ' '
-}
-datosBusqueda = (termino) =>{
-this.setState({
-  termino
-},()=>{
-this.consultarApi();
-})
-}
   render() {
     return (
       <div class="container">
       <div class="panel-heading">
-        <h3 class="panel-title">
-          Burguer Queen
-        </h3>
+      <NavbarPag/>
       </div>
       <div class="panel-body">
       <NameForm />
+      <Button variant="info">Info</Button>
       </div>
-        {this.state.termino}
       </div>
     );
   }
