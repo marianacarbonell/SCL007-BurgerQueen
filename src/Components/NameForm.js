@@ -44,7 +44,6 @@ class NameForm extends Component {
                     </div>
                     <div className="container">
                     <div className="btn-lg col-md-6">
-                        <input type="submit" value="Desayuno" onClick={this.handleSubmit} />
                         <input type="submit" value="Almuerzo / Cena" onClick={this.handleSubmit} />
                     </div>
                     <div className="col-md-6">

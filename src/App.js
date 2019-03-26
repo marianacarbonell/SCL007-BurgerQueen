@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import NameForm from './Components/NameForm'; 
 import { Link } from 'react-router-dom';
 import firebase from './firebase';
-import { Button } from 'react-bootstrap';
-import NavbarPag from'./Components/Navbar'; 
+import NavbarPag from'./Components/Navbar';
+import MenuBreakfast from './Components/menuBreakfast'; 
+
 
 
 class App extends Component {
@@ -15,9 +16,11 @@ class App extends Component {
       <NavbarPag/>
       </div>
       <NameForm />
+      <MenuBreakfast/>
       </div>
     );
   }
 }
+
 
 export default App;
