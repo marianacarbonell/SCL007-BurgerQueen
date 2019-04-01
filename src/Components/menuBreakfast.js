@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-import { breakfast } from '../Components/JSON/breakfast.json';
+import { breakfast } from '../Components/JSON/breakfast.json'
 import { Card, Container, Row, Col, Button} from 'react-bootstrap';
 
 
 class MenuBreakfast extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             breakfast,
-            breakfastArr: [],
+            breakfastArr: []
         }
 
         this.food = this.food.bind(this);
-    };
+    }
 
-    food() {
-        this.state({
+    food(){
+
+        this.setState({
             ...this.state,
             breakfastArr: this.state.breakfast.map((breakfast, i) => {
                 return (
                     <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>{breakfast.name}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">{breakfast.price}</Card.Subtitle>
+                            <Card.Title> {breakfast.name} </Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted"> {breakfast.price} </Card.Subtitle>
                         </Card.Body>
                     </Card>
 
@@ -32,9 +33,12 @@ class MenuBreakfast extends Component {
     }
     render() {
         return (
-            <Button type="button" variant="outline-primary" onClick={this.food}>Desayuno</Button>
-
-                );
+            <div>
+                <Button type="button" variant="outline-primary" onClick={this.food}>Desayuno</Button>
+                {this.state.breakfastArr}
+            </div>
+ 
+                )
             }
         }
 export default MenuBreakfast;

@@ -37,18 +37,11 @@ class NameForm extends Component {
         return (
             <div className="app">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-8">
                         <form onSubmit={this.handleSubmit}>
-                            <input type="text" value={this.state.name} placeHolder="Nombre del Cliente" className="form-control form-control-lg mt-2" onChange={this.handleChange} />
+                            <input type="text" value={this.state.name} placeholder="Nombre del Cliente" className="form-control form-control-lg mt-2" onChange={this.handleChange} />
+                            <input type="submit" className="btn btn-lg col-md-6 btn-info mt-2" value="Enviar" onClick={this.handleSubmit} />
                         </form>
-                    </div>
-                    <div className="container">
-                    <div className="btn-lg col-md-6">
-                        <input type="submit" value="Almuerzo / Cena" onClick={this.handleSubmit} />
-                    </div>
-                    <div className="col-md-6">
-                        <input type="submit" className="btn btn-info mt-2" value="Enviar" onClick={this.handleSubmit} />
-                    </div>
                     </div>
                 </div>
             </div>

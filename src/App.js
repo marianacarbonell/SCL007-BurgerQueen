@@ -11,8 +11,8 @@ class App extends Component {
 
   render() {
     return (
-      <div class="app">
-      <div class="panel-heading">
+      <div className="app">
+      <div className="panel-heading">
       <NavbarPag/>
       </div>
       <NameForm />
