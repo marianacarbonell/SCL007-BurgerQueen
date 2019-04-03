@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { breakfast } from '../Components/JSON/breakfast.json'
-import { Card, Container, Row, Col, Button} from 'react-bootstrap';
+import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 
 
 class MenuBreakfast extends Component {
@@ -14,18 +14,22 @@ class MenuBreakfast extends Component {
         this.food = this.food.bind(this);
     }
 
-    food(){
+    food() {
 
         this.setState({
             ...this.state,
             breakfastArr: this.state.breakfast.map((breakfast, i) => {
                 return (
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title> {breakfast.name} </Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted"> {breakfast.price} </Card.Subtitle>
-                        </Card.Body>
-                    </Card>
+                    <div className="row">
+                        <div className="col ml-8">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Body>
+                                    <Card.Title> {breakfast.name} </Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted"> {breakfast.price} </Card.Subtitle>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    </div>
 
                 )
             })
@@ -37,8 +41,8 @@ class MenuBreakfast extends Component {
                 <Button type="button" variant="outline-primary" onClick={this.food}>Desayuno</Button>
                 {this.state.breakfastArr}
             </div>
- 
-                )
-            }
-        }
+
+        )
+    }
+}
 export default MenuBreakfast;

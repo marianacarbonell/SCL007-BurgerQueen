@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import firebase from './firebase';
 import NavbarPag from'./Components/Navbar';
 import MenuBreakfast from './Components/menuBreakfast'; 
+import MenuDinner from './Components/menuDinner';
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
       </div>
       <NameForm />
       <MenuBreakfast/>
+      <MenuDinner/>
       </div>
     );
   }
