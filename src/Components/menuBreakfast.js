@@ -20,16 +20,18 @@ class MenuBreakfast extends Component {
             ...this.state,
             breakfastArr: this.state.breakfast.map((breakfast, i) => {
                 return (
-                    <div className="row">
-                        <div className="col ml-8">
+                    <Container>
+                    <Row className="cardBreakfast">
+                        <Col sm="8">
                             <Card style={{ width: '18rem' }}>
                                 <Card.Body>
                                     <Card.Title> {breakfast.name} </Card.Title>
                                     <Card.Subtitle className="mb-2 text-muted"> {breakfast.price} </Card.Subtitle>
                                 </Card.Body>
                             </Card>
-                        </div>
-                    </div>
+                            </Col>
+                    </Row>
+                    </Container>
 
                 )
             })

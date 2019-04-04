@@ -10,13 +10,27 @@ import MenuDinner from './Components/menuDinner';
 
 class App extends Component {
 
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//         termino: ''
+//     };
+
+// clientName = (termino) => {
+
+// }
+ 
+
   render() {
     return (
       <div className="app">
       <div className="panel-heading">
       <NavbarPag/>
       </div>
-      <NameForm />
+      <NameForm 
+      // clientName={this.clientName}
+      />
+      {/* {this.state.termino} */}
       <MenuBreakfast/>
       <MenuDinner/>
       </div>

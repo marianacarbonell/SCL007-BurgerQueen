@@ -33,18 +33,27 @@ class NameForm extends Component {
         }).catch(() => {
         })
     }
+    nameRef = React.createRef();
+    handleName = (e) => {
+     e.preventDefault();
+     const termino = (this.nameRef.current.value);
+     this.props.clientName(termino);
+    }
+
     render() {
         return (
-            <div className="app">
-                <div className="row">
-                    <div className="col-md-8">
-                        <form onSubmit={this.handleSubmit}>
-                            <input type="text" value={this.state.name} placeholder="Nombre del Cliente" className="form-control form-control-lg mt-2" onChange={this.handleChange} />
-                            <input type="submit" className="btn btn-lg col-md-6 btn-info mt-2" value="Enviar" onClick={this.handleSubmit} />
-                        </form>
+            // <form onSubmit={this.handleName}>
+                <div onSubmit={this.handleName} className="app">
+                    <div className="row">
+                        <div className="col-md-8">
+                            <form onSubmit={this.handleSubmit}>
+                                <input ref={this.nameRef} type="text" value={this.state.name} placeholder="Nombre del Cliente" className="form-control form-control-lg mt-2" onChange={this.handleChange} />
+                                <input type="submit" className="btn btn-lg col-md-6 btn-info mt-2" value="Enviar" onClick={this.handleSubmit} />
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            // </form>
         );
     }
 
